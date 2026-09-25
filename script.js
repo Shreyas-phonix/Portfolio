@@ -9,8 +9,8 @@ document.querySelectorAll(".reveal").forEach(el=>{
     scrollTrigger:{trigger:el,start:"top 85%",once:true}});
 });
 
-// 3D tilt on project cards
-document.querySelectorAll(".project").forEach(card=>{
+// 3D tilt on project cards & design tiles
+document.querySelectorAll(".project,.design-tile").forEach(card=>{
   card.addEventListener("mousemove",e=>{
     const r=card.getBoundingClientRect();
     const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
@@ -61,6 +61,30 @@ targets.forEach(t=>{
 });
 ScrollTrigger.create({trigger:document.body,start:0,end:"max",
   onLeaveBack:()=>setActive("")});
+
+// "Click through" toast — teaches visitors that cards & links open live sites
+const toast=document.getElementById("tapToast");
+if(toast){
+  const KEY="tapHintShown";
+  let timer=null;
+  const show=()=>{
+    if(sessionStorage.getItem(KEY))return;
+    sessionStorage.setItem(KEY,"1");
+    toast.classList.add("show");
+    clearTimeout(timer);
+    timer=setTimeout(()=>toast.classList.remove("show"),2000);
+  };
+  // one reminder per visit: re-arm when the page is freshly loaded (incl. back-nav)
+  window.addEventListener("pagehide",()=>sessionStorage.removeItem(KEY));
+  // 1) the moment a visitor hovers/touches anything tappable
+  document.querySelectorAll(".project,.design-tile,.floating-card,.link-hint").forEach(el=>{
+    el.addEventListener("mouseenter",show,{once:true});
+    el.addEventListener("touchstart",show,{once:true,passive:true});
+  });
+  // 2) or on first scroll / shortly after arriving
+  window.addEventListener("scroll",show,{once:true,passive:true});
+  setTimeout(show,2500);
+}
 
 // Smooth anchor scrolling
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
