@@ -8,21 +8,53 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=19" />
+  <link rel="stylesheet" href="cardnav.css" />
 </head>
 <body>
   <div class="noise"></div>
 
-  <header class="nav">
-    <nav>
-      <a href="#about">About</a>
-      <a href="#design">Design</a>
-      <a href="#work">Work</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+  <div class="card-nav-container">
+    <nav class="card-nav" style="background-color:#101218">
+      <div class="card-nav-top">
+        <div class="hamburger-menu" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0" style="color:#f4f2ed">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </div>
+
+        <div class="logo-container">
+          <a href="#home" class="logo-link" aria-label="Back to top">P. V. Sai Shreyas</a>
+        </div>
+
+        <a class="card-nav-cta-button" href="#contact" aria-label="Scroll to contact section" style="background-color:#6c8cff;color:#10110c">Let's talk ↗</a>
+      </div>
+
+      <div class="card-nav-content" aria-hidden="true">
+        <div class="nav-card" style="background-color:#161a24;color:#f4f2ed">
+          <div class="nav-card-label">Explore</div>
+          <div class="nav-card-links">
+            <a class="nav-card-link" href="#about" aria-label="About me"><svg class="card-nav-link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 h6 v6"/></svg>About</a>
+            <a class="nav-card-link" href="#design" aria-label="Graphic design work"><svg class="card-nav-link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 h6 v6"/></svg>Design</a>
+          </div>
+        </div>
+        <div class="nav-card" style="background-color:#1c2030;color:#f4f2ed">
+          <div class="nav-card-label">Work</div>
+          <div class="nav-card-links">
+            <a class="nav-card-link" href="#work" aria-label="Featured projects"><svg class="card-nav-link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 h6 v6"/></svg>Projects</a>
+            <a class="nav-card-link" href="#skills" aria-label="Skills and toolkit"><svg class="card-nav-link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 h6 v6"/></svg>Skills</a>
+          </div>
+        </div>
+        <div class="nav-card" style="background-color:#1c2030;color:#f4f2ed">
+          <div class="nav-card-label">Connect</div>
+          <div class="nav-card-links">
+            <a class="nav-card-link" href="mailto:pvsaishreyas2005@gmail.com" aria-label="Email me"><svg class="card-nav-link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 h6 v6"/></svg>Email</a>
+            <a class="nav-card-link" href="https://github.com/Shreyas-phonix" target="_blank" rel="noreferrer" aria-label="GitHub profile"><svg class="card-nav-link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 h6 v6"/></svg>GitHub</a>
+            <a class="nav-card-link" href="https://www.linkedin.com/in/p-v-sai-shreyas-4b1769305/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile"><svg class="card-nav-link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 h6 v6"/></svg>LinkedIn</a>
+          </div>
+        </div>
+      </div>
     </nav>
-    <a class="nav-cta" href="#contact">Let's talk ↗</a>
-  </header>
+  </div>
 
   <main>
     <section id="home" class="hero">
@@ -30,7 +62,7 @@
       <div class="orb orb-a"></div><div class="orb orb-b"></div>
       <div class="hero-copy reveal">
         <p class="eyebrow"><span class="pulse"></span> Available for opportunities</p>
-        <p class="hero-name">P. V. Sai Shreyas<span>.</span></p>
+        <p class="hero-name">P. V. Sai Shreyas</p>
         <h1>Designing <em>ideas</em>.<br>Building <strong>impact.</strong></h1>
         <p class="hero-sub">Information Science & Engineering student focused on <b>graphic design</b>, <b>UI/UX</b> and <b>AI-powered digital products</b>.</p>
         <div class="hero-actions">
@@ -81,12 +113,10 @@
 
       <div class="design-grid">
         <a class="design-tile tile-c reveal link-hint" href="https://drive.google.com/drive/folders/1ogZPY0_KSPzRw4X4ntpldqHEhJiiF9nv?usp=sharing" target="_blank" rel="noreferrer" aria-label="Open Social Creatives design folder on Google Drive (opens in new tab)">
-          <div class="tile-visual">
-            <div class="social-cards">
-              <div class="sc sc-1"><b></b><i></i><i></i></div>
-              <div class="sc sc-2"><i></i><b></b><i></i></div>
-              <div class="sc sc-3"><i></i><i></i><b></b></div>
-            </div>
+          <div class="tile-visual video-visual">
+            <video class="tile-video vA" src="assets/social-media-bg.mp4" autoplay muted playsinline preload="auto"></video>
+            <video class="tile-video vB" src="assets/social-media-bg.mp4" muted playsinline preload="auto"></video>
+            <div class="video-fade"></div>
             <div class="tile-badge">01</div>
           </div>
           <div class="tile-info">
@@ -130,33 +160,8 @@
           <p>A multimodal deepfake detection and misinformation prevention platform with video upload, frame extraction, explainable AI results and a verification dashboard.</p>
           <div class="tags"><span>React</span><span>FastAPI</span><span>AI</span><span>UX</span></div>
         </div>
-        <div class="project-visual visual-one">
-          <svg class="proj-svg" viewBox="0 0 320 200" aria-hidden="true">
-            <rect x="30" y="22" width="260" height="156" rx="14" fill="#ffffff08" stroke="#ffffff1e"/>
-            <circle cx="50" cy="40" r="3.5" fill="#ff5f57"/><circle cx="62" cy="40" r="3.5" fill="#febc2e"/><circle cx="74" cy="40" r="3.5" fill="#28c840"/>
-            <rect x="45" y="55" width="118" height="82" rx="8" fill="#0f1118" stroke="#ffffff14"/>
-            <path d="M94 76 L118 96 L94 116 Z" fill="#6c8cff"/>
-            <line x1="45" y1="76" x2="163" y2="76" stroke="#6c8cff" stroke-opacity=".45"/>
-            <line x1="45" y1="96" x2="163" y2="96" stroke="#6c8cff" stroke-opacity=".25"/>
-            <line x1="45" y1="116" x2="163" y2="116" stroke="#6c8cff" stroke-opacity=".45"/>
-            <rect x="180" y="55" width="92" height="13" rx="6.5" fill="#6c8cff" opacity=".9"/>
-            <rect x="180" y="76" width="66" height="13" rx="6.5" fill="#b39bff" opacity=".75"/>
-            <rect x="180" y="97" width="80" height="13" rx="6.5" fill="#ffffff" opacity=".22"/>
-            <rect x="180" y="118" width="52" height="13" rx="6.5" fill="#ffffff" opacity=".12"/>
-            <g fill="#6c8cff">
-              <rect x="52" y="150" width="6" height="14" rx="3"/>
-              <rect x="64" y="144" width="6" height="20" rx="3"/>
-              <rect x="76" y="152" width="6" height="12" rx="3"/>
-              <rect x="88" y="140" width="6" height="24" rx="3"/>
-              <rect x="100" y="148" width="6" height="16" rx="3"/>
-              <rect x="112" y="143" width="6" height="21" rx="3"/>
-              <rect x="124" y="151" width="6" height="13" rx="3"/>
-              <rect x="136" y="146" width="6" height="18" rx="3"/>
-            </g>
-            <rect x="214" y="140" width="58" height="24" rx="12" fill="#6c8cff22" stroke="#6c8cff88"/>
-            <path d="M228 152 l4 4 l8 -9" stroke="#6c8cff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="252" cy="152" r="2" fill="#6c8cff"/><circle cx="260" cy="152" r="2" fill="#6c8cff88"/>
-          </svg>
+        <div class="project-visual visual-one img-visual">
+          <img class="proj-img img-mono" src="assets/infosphere-news.jpg" alt="Person reading a newspaper with the headline 'The End is Near'" loading="lazy"/>
         </div>
       </a>
 
@@ -167,27 +172,8 @@
           <p>AI-powered dental age estimation with an intuitive image-upload flow and prediction visualization.</p>
           <div class="tags"><span>Python</span><span>ML</span><span>UI/UX</span></div>
         </div>
-        <div class="project-visual visual-two">
-          <svg class="proj-svg" viewBox="0 0 320 200" aria-hidden="true">
-            <defs>
-              <linearGradient id="toothG" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#e8ecf7"/><stop offset="1" stop-color="#aeb8d6"/>
-              </linearGradient>
-            </defs>
-            <path d="M132 52 C106 52 94 70 97 90 C99 108 109 116 114 136 C118 150 126 158 133 155 C140 152 138 132 146 125 C151 120 161 120 166 125 C174 132 172 152 179 155 C186 158 194 150 198 136 C203 116 213 108 215 90 C218 70 206 52 180 52 C168 52 165 59 156 59 C147 59 144 52 132 52 Z" fill="url(#toothG)" stroke="#ffffff30" stroke-width="1.5"/>
-            <line x1="88" y1="92" x2="226" y2="92" stroke="#6c8cff" stroke-width="2" stroke-opacity=".9"/>
-            <line x1="88" y1="92" x2="226" y2="92" stroke="#6c8cff" stroke-width="10" stroke-opacity=".18"/>
-            <line x1="97" y1="70" x2="218" y2="70" stroke="#6c8cff" stroke-opacity=".28"/>
-            <line x1="97" y1="114" x2="218" y2="114" stroke="#6c8cff" stroke-opacity=".28"/>
-            <line x1="97" y1="136" x2="218" y2="136" stroke="#6c8cff" stroke-opacity=".2"/>
-            <rect x="234" y="58" width="56" height="84" rx="10" fill="#0f1118" stroke="#ffffff18"/>
-            <rect x="244" y="68" width="36" height="12" rx="6" fill="#6c8cff"/>
-            <rect x="244" y="88" width="26" height="12" rx="6" fill="#b39bff" opacity=".8"/>
-            <rect x="244" y="108" width="31" height="12" rx="6" fill="#ffffff" opacity=".2"/>
-            <path d="M70 168 A90 34 0 0 1 250 168" fill="none" stroke="#ffffff14" stroke-width="7" stroke-linecap="round"/>
-            <path d="M70 168 A90 34 0 0 1 160 134" fill="none" stroke="#6c8cff" stroke-width="7" stroke-linecap="round"/>
-            <circle cx="160" cy="134" r="6" fill="#6c8cff"/>
-          </svg>
+        <div class="project-visual visual-two img-visual">
+          <img class="proj-img" src="assets/dentage-xray.jpg" alt="Dental X-ray films held in clips" loading="lazy"/>
         </div>
       </article>
 
@@ -198,26 +184,8 @@
           <p>A responsive recommendation experience with personalized suggestions, search, filtering and content-based logic.</p>
           <div class="tags"><span>React</span><span>APIs</span><span>UX</span></div>
         </div>
-        <div class="project-visual visual-three">
-          <svg class="proj-svg" viewBox="0 0 320 200" aria-hidden="true">
-            <rect x="34" y="34" width="252" height="132" rx="12" fill="#0f1118" stroke="#ffffff1a"/>
-            <g fill="#2a2c35">
-              <rect x="46" y="42" width="10" height="8" rx="2"/><rect x="66" y="42" width="10" height="8" rx="2"/><rect x="86" y="42" width="10" height="8" rx="2"/><rect x="106" y="42" width="10" height="8" rx="2"/><rect x="126" y="42" width="10" height="8" rx="2"/><rect x="146" y="42" width="10" height="8" rx="2"/><rect x="166" y="42" width="10" height="8" rx="2"/><rect x="186" y="42" width="10" height="8" rx="2"/><rect x="206" y="42" width="10" height="8" rx="2"/><rect x="226" y="42" width="10" height="8" rx="2"/><rect x="246" y="42" width="10" height="8" rx="2"/><rect x="264" y="42" width="10" height="8" rx="2"/>
-              <rect x="46" y="150" width="10" height="8" rx="2"/><rect x="66" y="150" width="10" height="8" rx="2"/><rect x="86" y="150" width="10" height="8" rx="2"/><rect x="106" y="150" width="10" height="8" rx="2"/><rect x="126" y="150" width="10" height="8" rx="2"/><rect x="146" y="150" width="10" height="8" rx="2"/><rect x="166" y="150" width="10" height="8" rx="2"/><rect x="186" y="150" width="10" height="8" rx="2"/><rect x="206" y="150" width="10" height="8" rx="2"/><rect x="226" y="150" width="10" height="8" rx="2"/><rect x="246" y="150" width="10" height="8" rx="2"/><rect x="264" y="150" width="10" height="8" rx="2"/>
-            </g>
-            <rect x="46" y="56" width="228" height="88" rx="6" fill="#141821"/>
-            <path d="M96 84 L124 100 L96 116 Z" fill="#6c8cff"/>
-            <rect x="150" y="78" width="108" height="11" rx="5.5" fill="#6c8cff" opacity=".9"/>
-            <rect x="150" y="97" width="82" height="11" rx="5.5" fill="#b39bff" opacity=".7"/>
-            <rect x="150" y="116" width="96" height="11" rx="5.5" fill="#ffffff" opacity=".18"/>
-            <g fill="#febc2e">
-              <path d="M118 158 l3.2 6.6 7.3 1 -5.3 5.1 1.3 7.2 -6.5 -3.4 -6.5 3.4 1.3 -7.2 -5.3 -5.1 7.3 -1 Z" transform="scale(.9) translate(12 16)"/>
-              <path d="M118 158 l3.2 6.6 7.3 1 -5.3 5.1 1.3 7.2 -6.5 -3.4 -6.5 3.4 1.3 -7.2 -5.3 -5.1 7.3 -1 Z" transform="scale(.9) translate(38 16)"/>
-              <path d="M118 158 l3.2 6.6 7.3 1 -5.3 5.1 1.3 7.2 -6.5 -3.4 -6.5 3.4 1.3 -7.2 -5.3 -5.1 7.3 -1 Z" transform="scale(.9) translate(64 16)"/>
-              <path d="M118 158 l3.2 6.6 7.3 1 -5.3 5.1 1.3 7.2 -6.5 -3.4 -6.5 3.4 1.3 -7.2 -5.3 -5.1 7.3 -1 Z" transform="scale(.9) translate(90 16)"/>
-            </g>
-            <path d="M216 158 l3.2 6.6 7.3 1 -5.3 5.1 1.3 7.2 -6.5 -3.4 -6.5 3.4 1.3 -7.2 -5.3 -5.1 7.3 -1 Z" fill="#ffffff22" transform="scale(.9) translate(22 16)"/>
-          </svg>
+        <div class="project-visual visual-three img-visual">
+          <img class="proj-img" src="assets/netflix-collage.jpg" alt="Collage of movies and web series recommendations" loading="lazy"/>
         </div>
       </article>
     </section>
@@ -286,6 +254,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js?v=21"></script>
+  <script src="cardnav.js"></script>
 </body>
 </html>

@@ -51,17 +51,6 @@ if(copyBtn){
   });
 }
 
-// Active nav link on scroll
-const navLinks=[...document.querySelectorAll('.nav nav a')];
-const targets=navLinks.map(a=>document.querySelector(a.getAttribute("href"))).filter(Boolean);
-const setActive=id=>navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+id));
-targets.forEach(t=>{
-  ScrollTrigger.create({trigger:t,start:"top 55%",end:"bottom 55%",
-    onToggle:self=>{if(self.isActive)setActive(t.id);}});
-});
-ScrollTrigger.create({trigger:document.body,start:0,end:"max",
-  onLeaveBack:()=>setActive("")});
-
 // "Click through" toast — teaches visitors that cards & links open live sites
 const toast=document.getElementById("tapToast");
 if(toast){
@@ -86,10 +75,59 @@ if(toast){
   setTimeout(show,2500);
 }
 
-// Smooth anchor scrolling
+// Seamless video loop: two stacked copies crossfading forever (no visible cut, no stall)
+(() => {
+  const pair = document.querySelector(".video-visual");
+  if (!pair) return;
+  const vids = [...pair.querySelectorAll(".tile-video")];
+  if (vids.length < 2) return;
+  let front = vids[0], back = vids[1];
+  let fading = false;
+
+  const play = v => { const p = v.play(); if (p && p.catch) p.catch(()=>{}); };
+
+  front.style.opacity = "1";
+  back.style.opacity = "0";
+
+  const swap = () => {
+    front.pause();
+    const t = front; front = back; back = t;
+    front.style.opacity = "1";   // explicit inline always — never CSS defaults
+    back.style.opacity = "0";
+    back.currentTime = 0;
+    fading = false;
+  };
+
+  // watchdog: drives the whole cycle; fires even if timeupdate is skipped
+  setInterval(() => {
+    if (!front.duration || Number.isNaN(front.duration)) return;
+    const remaining = front.duration - front.currentTime;
+    if (remaining <= 0.75 && back.paused) { back.currentTime = 0; play(back); }
+    if (remaining <= 0.6 && !fading) {
+      fading = true;
+      back.style.opacity = "1";
+      front.style.opacity = "0";
+    }
+    if (front.ended || remaining <= 0.03) swap();
+  }, 120);
+
+  // absolute fallback: if the front clip ever hits 'ended', swap instantly
+  vids.forEach(v => v.addEventListener("ended", () => { if (v === front) swap(); }));
+
+  // restart playback if the browser blocked/stalled it (autoplay policies, tab sleep)
+  const kick = () => {
+    if (front.paused) play(front);
+    if (front.duration && front.duration - front.currentTime <= 0.75 && back.paused) play(back);
+  };
+  window.addEventListener("click", kick);
+  document.addEventListener("visibilitychange", kick);
+  kick();
+})();
+
+// Smooth anchor scrolling (instant fallback when tab is hidden — rAF smooth-scroll never ticks in background tabs)
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener("click",e=>{
     const target=document.querySelector(a.getAttribute("href"));
-    if(target){e.preventDefault();target.scrollIntoView({behavior:"smooth"});}
+    if(target){e.preventDefault();target.scrollIntoView({behavior:document.hidden?"auto":"smooth"});}
   });
 });
