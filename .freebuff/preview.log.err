@@ -1,7 +1,7 @@
-::1 - - [27/Sep/2026 14:36:53] "GET /index.html HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 10:08:31] "GET /index.html HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 10:08:38] "GET /index.html HTTP/1.1" 200 -
 ----------------------------------------
-::1 - - [27/Sep/2026 14:37:06] "GET /index.html HTTP/1.1" 200 -
-Exception occurred during processing of request from ('::ffff:127.0.0.1', 62599, 0, 0)
+Exception occurred during processing of request from ('::ffff:127.0.0.1', 59563, 0, 0)
 Traceback (most recent call last):
   File "C:\Program Files\Python314\Lib\socketserver.py", line 697, in process_request_thread
     self.finish_request(request, client_address)
@@ -28,45 +28,71 @@ Traceback (most recent call last):
            ~~~~~~~~~~~~~~~~~~~~^^^
 ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
 ----------------------------------------
-::1 - - [27/Sep/2026 14:37:06] "GET /index.html HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 14:37:12] "GET /style.css?v=18 HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 14:37:12] "GET /cardnav.css HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 14:37:12] "GET /assets/infosphere-news.jpg HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 14:37:12] "GET /assets/dentage-xray.jpg HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 14:37:12] "GET /assets/netflix-collage.jpg HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 14:37:12] "GET /script.js?v=20 HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 14:37:12] "GET /cardnav.js HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 14:37:12] "GET /assets/social-media-bg.mp4 HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 14:37:14] code 404, message File not found
-::1 - - [27/Sep/2026 14:37:14] "GET /favicon.ico HTTP/1.1" 404 -
-::1 - - [27/Sep/2026 14:37:14] code 404, message File not found
-::1 - - [27/Sep/2026 14:37:14] "GET /favicon.ico HTTP/1.1" 404 -
-::1 - - [27/Sep/2026 15:26:05] "GET /index.html HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 15:26:05] "GET /script.js?v=20 HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 15:26:05] "GET /style.css?v=18 HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 15:26:05] "GET /assets/social-media-bg.mp4 HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 15:26:05] "GET /cardnav.js HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 15:26:05] "GET /cardnav.css HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 15:26:50] "GET /index.html HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 15:27:04] "GET /assets/infosphere-news.jpg HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 15:27:05] "GET /assets/dentage-xray.jpg HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 15:27:12] "GET /assets/netflix-collage.jpg HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 15:48:08] "GET /index.html HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 15:48:08] "GET /index.html HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 15:50:39] "GET /index.html HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 15:50:39] "GET /index.html HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 15:50:39] "GET /script.js?v=21 HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 15:56:43] "GET /index.html HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 15:56:43] "GET /script.js?v=21 HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 15:56:43] "GET /assets/social-media-bg.mp4 HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 16:02:54] "GET /index.html HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 16:02:54] "GET /index.html HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 16:02:55] "GET /style.css?v=19 HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 16:02:55] "GET /script.js?v=21 HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 16:03:31] "GET /style.css?v=19 HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 16:04:47] "GET /index.html HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 16:04:47] "GET /style.css?v=19 HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 16:04:47] "GET /script.js?v=21 HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 16:04:47] "GET /assets/social-media-bg.mp4 HTTP/1.1" 200 -
-::1 - - [27/Sep/2026 18:06:43] "GET /assets/social-media-bg.mp4 HTTP/1.1" 304 -
-::1 - - [27/Sep/2026 18:12:31] "GET /style.css?v=19 HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 10:08:38] "GET /index.html HTTP/1.1" 304 -
+::1 - - [01/Oct/2026 10:08:38] "GET /style.css?v=19 HTTP/1.1" 304 -
+::1 - - [01/Oct/2026 10:08:38] "GET /cardnav.css HTTP/1.1" 304 -
+::1 - - [01/Oct/2026 10:08:38] "GET /assets/infosphere-news.jpg HTTP/1.1" 304 -
+::1 - - [01/Oct/2026 10:08:38] "GET /assets/dentage-xray.jpg HTTP/1.1" 304 -
+::1 - - [01/Oct/2026 10:08:38] "GET /assets/social-media-bg.mp4 HTTP/1.1" 304 -
+::1 - - [01/Oct/2026 10:08:38] "GET /assets/netflix-collage.jpg HTTP/1.1" 304 -
+::1 - - [01/Oct/2026 10:08:39] "GET /script.js?v=21 HTTP/1.1" 304 -
+::1 - - [01/Oct/2026 10:08:39] "GET /cardnav.js HTTP/1.1" 304 -
+::1 - - [01/Oct/2026 10:08:41] code 404, message File not found
+::1 - - [01/Oct/2026 10:08:41] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [01/Oct/2026 10:08:43] code 404, message File not found
+::1 - - [01/Oct/2026 10:08:43] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [01/Oct/2026 10:10:28] "GET /index.html HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 10:10:28] "GET /style.css?v=19 HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 10:10:28] "GET /cardnav.css HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 10:10:28] "GET /script.js?v=21 HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 10:10:28] "GET /cardnav.js HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 10:10:28] "GET /assets/social-media-bg.mp4 HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 10:10:29] code 404, message File not found
+::1 - - [01/Oct/2026 10:10:29] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [01/Oct/2026 10:10:40] "GET /assets/infosphere-news.jpg HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 10:10:41] "GET /assets/dentage-xray.jpg HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 10:10:46] "GET /assets/netflix-collage.jpg HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 10:27:08] "GET /assets/social-media-bg.mp4 HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 17:10:23] "GET /index.html HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 17:10:23] "GET /index.html HTTP/1.1" 304 -
+::1 - - [01/Oct/2026 17:10:24] "GET /script.js?v=22 HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 17:10:24] "GET /assets/photo-editing-bg.mp4 HTTP/1.1" 200 -
+::1 - - [01/Oct/2026 17:10:39] "GET /assets/photo-editing-bg.mp4 HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('::1', 55606, 0, 0)
+Traceback (most recent call last):
+  File "C:\Program Files\Python314\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\http\server.py", line 1422, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             directory=args.directory)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\http\server.py", line 732, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\Python314\Lib\http\server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\Python314\Lib\http\server.py", line 484, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Program Files\Python314\Lib\http\server.py", line 739, in do_GET
+    self.copyfile(f, self.wfile)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\http\server.py", line 942, in copyfile
+    shutil.copyfileobj(source, outputfile)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\shutil.py", line 257, in copyfileobj
+    fdst_write(buf)
+    ~~~~~~~~~~^^^^^
+  File "C:\Program Files\Python314\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+::1 - - [01/Oct/2026 18:16:55] "GET /assets/photo-editing-bg.mp4 HTTP/1.1" 200 -

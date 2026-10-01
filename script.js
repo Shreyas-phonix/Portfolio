@@ -75,10 +75,8 @@ if(toast){
   setTimeout(show,2500);
 }
 
-// Seamless video loop: two stacked copies crossfading forever (no visible cut, no stall)
-(() => {
-  const pair = document.querySelector(".video-visual");
-  if (!pair) return;
+// Seamless video loops: every .video-visual gets two stacked copies crossfading forever (no visible cut, no stall)
+[...document.querySelectorAll(".video-visual")].forEach(pair => {
   const vids = [...pair.querySelectorAll(".tile-video")];
   if (vids.length < 2) return;
   let front = vids[0], back = vids[1];
@@ -122,7 +120,7 @@ if(toast){
   window.addEventListener("click", kick);
   document.addEventListener("visibilitychange", kick);
   kick();
-})();
+});
 
 // Smooth anchor scrolling (instant fallback when tab is hidden — rAF smooth-scroll never ticks in background tabs)
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
